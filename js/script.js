@@ -41,3 +41,9 @@ function darken2() {
   var img = document.getElementById("main-img");
   img.src="/image/minecraft.png";
 } 
+// loader
+$(window).on("load",function(){
+  setTimeout(function(){ 
+    $(".loader-wrapper").fadeOut("slow");
+  }, 2000); // Setter forsinkelsestid til 5000 millisekunder (5 sekunder)
+});

@@ -33,14 +33,38 @@
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
 
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    
+
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bxs-chevrons-up'></i></button> 
 
     <section class="hero">
         <div class="main-width">
             <header>
                 <div class="logo_tekst">
-                    <a href="index.html"><img src="./image/trident2.png" class="logo"></a>
-                    <h1><a href="#">Poseidon</a></h1>
+                    <a href="index.html"><img src="./image/jester.png" class="logo"></a>
                 </div>
 
                 <nav>
@@ -67,11 +91,10 @@
         </div>
     </section>
 
-    <div class="loader-wrapper">
-        <span class="loader"><span class="loader-inner"></span></span>
-    </div>
+
 
     <script type="text/javascript" src="/js/script.js" defer></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 
 </html>

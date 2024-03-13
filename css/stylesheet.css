@@ -50,17 +50,18 @@
     z-index: 1;
     pointer-events: none;
 }
-.main-width{
-    width: 1400px;
-    max-width: 95%;
-    margin: 0 auto;
-}
+/*Home side*/
 .hero {
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    background: var(--primary-bg-blue);
-    position: relative;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+
 }
 .hero header .logo_tekst h1{
     display: inline-block;
@@ -81,6 +82,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 0 30px;
+}
+.main-width{
+    width: 1400px;
+    max-width: 95%;
+    margin: 0 auto;
 }
 nav ul li{
     list-style: none;

@@ -1,6 +1,5 @@
 :root{
     --primary-bg-blue: radial-gradient(#36D1DC,30%, #5B86E5);
-    --primary-bg-gold: radial-gradient(#dbd032,30%, #e7a833);
     --up-btn: rgba(71, 74, 255, 0.486);
     --info-shadow: 0 0 50px 5px rgba(114, 81, 19, 0.678);
     --info-box-bg: #fff;
@@ -20,7 +19,6 @@
 }
 .dark-mode {
     --primary-bg-blue: radial-gradient(#071b1d,30%, #0e1422);
-    --primary-bg-gold: radial-gradient(#272727,30%, #1a1a1a);
     --up-btn: rgba(44, 46, 150, 0.486);
     --info-shadow: 0 0 50px 5px rgba(17, 14, 9, 0.678);
     --info-box-bg: rgb(197, 197, 197);

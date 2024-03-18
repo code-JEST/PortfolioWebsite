@@ -118,6 +118,11 @@
     float: right;
     font-size: 35px;
     color: #ffffff;
+    transition: .2s;
+}
+.bx-menu:hover{
+    color: #222222;
+    transition: .2s;
 }
 #close{
     z-index: 101;
@@ -125,6 +130,11 @@
     float: right;
     color: #ffffff;
     font-size: 25px;
+    transition: .2s;
+}
+#close:hover{
+    color: #222222;
+    transition: .2s;
 }
 #menu{
     position: absolute;
@@ -136,8 +146,6 @@
     opacity: 0;
     transition: all 1s ease;
 }
-
-
 #menu li a{
     display: inline-block;
     padding: 10px;
@@ -149,7 +157,7 @@
     transition: all 0.3s ease;
 }
 #menu li a:hover{
-    color: #f8b943;
+    color: #222222;
     transition: .4s;
 }
 /*Hamburger menu GLASS*/
@@ -175,14 +183,11 @@
 /*loader*/
 .loader-text{
     font-size: 20px;
-    position: fixed;
-    top: 55%;
     color: aliceblue;
+    margin: 20px 0;
 }
 .work-in-prgogress{
     font-size: 10px;
-    position: fixed;
-    top: 58%;
     color: aliceblue;
 }
 .loader-wrapper{
@@ -196,6 +201,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .loader {
     width: 84px;

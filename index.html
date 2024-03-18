@@ -39,6 +39,9 @@
     <!--Custome cursor-->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
+
+
+
     
     <!--Blur intaktiv bg-->
     <div class="gradient-bg">
@@ -61,25 +64,35 @@
         </div>
     </div>
 
+    <!--On top button-->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bxs-chevrons-up'></i></button> 
 
+
+
+
+
+    <!--Main-->
     <section class="hero">
         <div class="main-width">
             <header>
                 <div class="logo_tekst">
                     <a href="index.html"><img src="./image/jester.png" class="logo"></a>
                 </div>
+                  <div class="menu-functions">
+                      <!--NAV test-->
+                      <i class='bx bx-menu' onclick="openMenu()"></i>
+                      <div id="container-hamburger">
+                        <div id="close" onclick="closeMenu()"><i class='bx bx-x'></i></div>
+                        <ul id="menu">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="">Work</a></li>
+                          <li><a href="">About</a></li>
+                      </ul>
+                      </div>
 
-                <nav>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Work</a></li>
-                        <li><a href="">About</a></li>
-                    </ul>
-                </nav>
-
-                <button onclick="darken()" id="darkmode" title="darkmode"><i class='bx bxs-sun'></i></button>
-                <button onclick="darken2()" id="darkmode2" title="darkmode"><i class='bx bxs-moon' ></i></button>
+                    <button onclick="darken()" id="darkmode" title="darkmode"><i class='bx bxs-sun'></i></button>
+                    <button onclick="darken2()" id="darkmode2" title="darkmode"><i class='bx bxs-moon' ></i></button>
+                  </div>
             </header>
 
             <div class="content">
@@ -96,8 +109,11 @@
 
 
 
+
+
+
+
     <script type="text/javascript" src="/js/script.js" defer></script>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 
 </html>

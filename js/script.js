@@ -10,6 +10,16 @@ if (isChrome) {
     document.documentElement.style.setProperty('--my-filter', 'none');
 }
 
+// Hamburger menu:
+function openMenu(){
+  document.getElementById('container-hamburger').style.right='0%';
+  document.getElementById('menu').style.opacity='1';
+}
+function closeMenu(){
+  document.getElementById('container-hamburger').style.right='100%';
+  document.getElementById('menu').style.opacity='0';
+}
+
 
 // Mouse Animation:
 const cursor = document.querySelector(".interactive")

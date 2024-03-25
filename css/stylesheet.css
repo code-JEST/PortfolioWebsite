@@ -3,7 +3,7 @@
     --basic-btn: rgb(255, 255, 255);
     --front-text: rgb(255, 255, 255);
     --hamburger-text: rgb(255, 255, 255);
-    --hamburger-textHover: rgb(82, 82, 82);
+    --hamburger-textHover: rgb(46, 51, 128);
 
     /*Background Animated*/
     --color-bg1: rgb(108, 0, 162);
@@ -44,7 +44,7 @@
 .cursor-dot{
     width: 5px;
     height: 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 .cursor-outline{
     width: 30px;
@@ -147,6 +147,7 @@
 }
 #menu li a:hover{
     color: var(--hamburger-textHover);
+    transform: translate(-2%,-2%);
     transition: .4s;
 }
 /*Hamburger menu GLASS*/
@@ -167,8 +168,28 @@
     text-align: center;
     transition: all 0.6s ease;
 }
-
-
+/*To top*/
+#myBtn {
+    display: none; 
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 105;
+    border: none;
+    outline: none;
+    background-color: var(--up-btn);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: .2s;
+  }
+  
+#myBtn:hover {
+    background-color: rgba(85, 85, 85, 0.842);
+    transition: .2s;
+}
 /*loader*/
 .loader-text{
     font-size: 20px;
@@ -207,7 +228,7 @@
     border-radius: 50%;
     background:rgb(212, 95, 105);
     transform: translate(-50% , -100%)  scale(0);
-    animation: push 2s infinite linear;
+    animation: push 2s infinite linear; 
   }
   .loader:after {
     animation-delay: 1s;
@@ -275,6 +296,7 @@
 /*CONENT*/
 .content{
     padding-top: 200px;
+    transition: transform 0.5s ease-out; 
 }
 .content .main-text{
     position: relative;
@@ -451,4 +473,90 @@ svg{
     top: -50%;
     left: -50%;
     opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------ABOUT-------------*/
+/*CONENT*/
+#content-about{
+    top: 0;
+    padding-top: 670px;
+    position: absolute;
+    right: 200%;
+    transition: right 0.5s ease-out; 
+}
+#content-about .main-text-about{
+    position: relative;
+    z-index: 2;
+}
+#content-about .main-text-about h1{
+    font-size: 60px;
+    line-height: 1;
+    color: var(--front-text);
+    margin: 2px 0 10px;
+    font-weight: 900;
+}
+#content-about .main-text-about h2{
+    font-size: 16px;
+    color: var(--front-text);
+    margin: 0 0 0 10px;
+}
+#content-about .main-text-about p{
+    max-width: 100%;
+    width: 570px;
+    color: var(--front-text);
+    line-height: 1.5;
+    font-size: 20px;
+}
+#content-about .main-text-about a i{
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+
+
+/*-------------WORK-------------*/
+/*CONENT*/
+#content-work{
+    top: 0;
+    padding-top: 670px;
+    position: absolute;
+    right: 200%;
+    transition: right 0.5s ease-out; 
+}
+#content-work .main-text-work{
+    position: relative;
+    z-index: 2;
+}
+#content-work .main-text-work h1{
+    font-size: 60px;
+    line-height: 1;
+    color: var(--front-text);
+    margin: 2px 0 10px;
+    font-weight: 900;
+}
+#content-work .main-text-work h2{
+    font-size: 16px;
+    color: var(--front-text);
+    margin: 0 0 0 10px;
+}
+#content-work .main-text-work p{
+    max-width: 100%;
+    width: 570px;
+    color: var(--front-text);
+    line-height: 1.5;
+    font-size: 20px;
+}
+#content-work .main-text-work a i{
+    font-size: 25px;
+    margin-right: 10px;
 }

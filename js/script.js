@@ -104,3 +104,34 @@ $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");
   }, 2000);
 });
+
+
+
+
+
+
+// ----------------ABOUT------------------------
+function openAbout(){
+  document.getElementById('content-about').style.right='0%';
+}
+function hideWorkText(){
+  document.getElementById('content-work').style.right='200%';
+}
+
+function hideFrontText(){
+  var elements = document.getElementsByClassName('content');
+for(var i = 0; i < elements.length; i++){
+    elements[i].style.transform = 'translateX(-100%)';
+}
+}
+
+
+
+// ----------------WORK------------------------
+function openWork(){
+  document.getElementById('content-work').style.right='0%';
+}
+
+function hideAboutText(){
+  document.getElementById('content-about').style.right='200%';
+}

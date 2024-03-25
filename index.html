@@ -84,9 +84,9 @@
                       <div id="container-hamburger">
                         <div id="close" onclick="closeMenu()"><i class='bx bx-x'></i></div>
                         <ul id="menu">
-                          <li><a href="">Home</a></li>
-                          <li><a href="">Work</a></li>
-                          <li><a href="">About</a></li>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="#" onclick="openWork(); closeMenu(); hideFrontText(); hideAboutText()">Work</a></li>
+                          <li><a href="#" onclick="openAbout(); closeMenu(); hideFrontText(); hideWorkText()">About</a></li>
                       </ul>
                       </div>
 
@@ -107,6 +107,23 @@
     </section>
 
 
+     <!--About-->
+    <div id="content-about">
+      <div class="main-text-about">
+          <h2>About</h2>
+          <h1>Adrian Hoff</h1>
+          <p>Test test</p>
+      </div>
+    </div>
+  
+      <!--Work-->
+    <div id="content-work">
+        <div class="main-text-work">
+            <h2>Work</h2>
+            <h1>The stuff</h1>
+            <p>Test test</p>
+        </div>
+    </div>
 
 
 

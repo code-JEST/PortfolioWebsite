@@ -24,6 +24,16 @@ function closeMenu(){
   document.getElementById('menu').style.opacity='0';
 }
 
+// Settings menu:
+function openSettings(){
+  document.getElementById('container-settings').style.right='0%';
+  document.getElementById('settings-menu').style.opacity='1';
+}
+function closeSettings(){
+  document.getElementById('container-settings').style.right='100%';
+  document.getElementById('settings-menu').style.opacity='0';
+}
+
 
 // Mouse Animation:
 const cursor = document.querySelector(".interactive")

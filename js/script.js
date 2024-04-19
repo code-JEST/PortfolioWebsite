@@ -11,7 +11,7 @@ if (isChrome) {
     // Remove or change CSS filter for Firefox
     document.documentElement.style.setProperty('--my-filter', 'none');
     // Change job title for Firefox
-    document.getElementById('job-title').innerText = 'Firefox Specialist';
+    document.getElementById('job-title').innerText = 'Are you on Firefox? you should use chrome';
 }
 
 // Hamburger menu:
@@ -26,11 +26,13 @@ function closeMenu(){
 
 // Settings menu:
 function openSettings(){
-  document.getElementById('container-settings').style.right='0%';
+  document.getElementById('container-settings').style.right='50%';
+  document.getElementById('container-settings').style.left='50%';
   document.getElementById('settings-menu').style.opacity='1';
 }
 function closeSettings(){
   document.getElementById('container-settings').style.right='100%';
+  document.getElementById('container-settings').style.left='-50%';
   document.getElementById('settings-menu').style.opacity='0';
 }
 

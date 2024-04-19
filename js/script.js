@@ -1,13 +1,17 @@
-// Sjekker om det er firfox eller chrome:
+// ------------------Sjekker om det er firfox eller chrome----------------------:
 let isFirefox = typeof InstallTrigger !== 'undefined';
 let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 
 if (isChrome) {
     // Apply CSS filter for Chrome
     document.documentElement.style.setProperty('--my-filter', 'url(#goo) blur(40px)');
+    // Change job title for Chrome
+    document.getElementById('job-title').innerText = 'IT Specialist';
 } else if (isFirefox) {
     // Remove or change CSS filter for Firefox
     document.documentElement.style.setProperty('--my-filter', 'none');
+    // Change job title for Firefox
+    document.getElementById('job-title').innerText = 'Firefox Specialist';
 }
 
 // Hamburger menu:

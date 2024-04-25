@@ -1,4 +1,9 @@
 // ------------------Sjekker om det er firfox eller chrome----------------------:
+if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+  // Add a class to the <html> or <body> tag
+  document.documentElement.classList.add('firefox');
+}
+
 let isFirefox = typeof InstallTrigger !== 'undefined';
 let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 

@@ -497,6 +497,18 @@ svg{
     transform-origin: center center;
     animation: moveVertical 30s ease infinite;
 }
+
+.firefox .g1:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+    filter: url("#goo");
+  
+}
 .g2{
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
@@ -509,6 +521,17 @@ svg{
 
     transform-origin: calc(50% - 400px);
     animation: moveInCircle 20s reverse infinite;
+}
+.firefox .g2:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+    filter: url("#goo");
+  
 }
 .g3{
     position: absolute;
@@ -523,6 +546,17 @@ svg{
     transform-origin: calc(50% + 400px);
     animation: moveInCircle 40s linear infinite;
 }
+.firefox .g3:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+    filter: url("#goo");
+  
+}
 .g4{
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
@@ -536,7 +570,18 @@ svg{
     transform-origin: calc(50% - 200px);
     animation: moveHorizontal 40s ease infinite;
 }
-.g2{
+.firefox .g4:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+    filter: url("#goo");
+  
+}
+.g5{
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
@@ -548,6 +593,17 @@ svg{
 
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
+}
+.firefox .g5:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+    filter: url("#goo");
+  
 }
 .interactive{
     position: absolute;

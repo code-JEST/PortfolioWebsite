@@ -476,6 +476,9 @@
     top: 0;
     left: 0;
 }
+.firefox .gradient-bg{
+    display: none;
+}
 svg{
     display: none;
 }
@@ -514,18 +517,6 @@ svg{
     transform-origin: center center;
     animation: moveVertical 30s ease infinite;
 }
-
-.firefox .g1:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-    filter: url("#goo");
-  
-}
 .g2{
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
@@ -538,17 +529,6 @@ svg{
 
     transform-origin: calc(50% - 400px);
     animation: moveInCircle 20s reverse infinite;
-}
-.firefox .g2:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-    filter: url("#goo");
-  
 }
 .g3{
     position: absolute;
@@ -563,17 +543,6 @@ svg{
     transform-origin: calc(50% + 400px);
     animation: moveInCircle 40s linear infinite;
 }
-.firefox .g3:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-    filter: url("#goo");
-  
-}
 .g4{
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
@@ -586,17 +555,6 @@ svg{
 
     transform-origin: calc(50% - 200px);
     animation: moveHorizontal 40s ease infinite;
-}
-.firefox .g4:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-    filter: url("#goo");
-  
 }
 .g5{
     position: absolute;
@@ -611,17 +569,6 @@ svg{
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
 }
-.firefox .g5:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-    filter: url("#goo");
-  
-}
 .interactive{
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
@@ -634,6 +581,87 @@ svg{
     filter: url("#goo");
 }
 
+
+/*Background Animated for firefox*/
+.firefox .backgroundFirefox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+}
+.swiper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    display: none;
+  }
+.firefox .swiper {
+    display: block;
+}
+
+  
+  /* -------------------- */
+  /* BACKGROUND ANIMATION */
+  
+  .gradient {
+    width: 1000px;
+    height: 1000px;
+    position: fixed;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    left: 20%;
+    filter: blur(50px);
+    background-image: linear-gradient(#4ddc9e, #5b37eb, #f1307e);
+    animation: rotate 10s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* ---------------- */
+  /* SLIDE ANIMATION */
+  
+  .swiper-slide-active [data-animate] {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .swiper-slide-active .title {
+    transition-delay: 0.6s;
+  }
+  
+  .swiper-slide-active .songs {
+    transition-delay: 1s;
+  }
+  
+  .swiper-slide-active .overview {
+    transition-delay: 1.4s;
+  }
+  
+  [data-animate] {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+  }
+  
+  [data-animate="bottom"] {
+    transform: translate3d(0, 15px, 0);
+  }
 
 
 /*-------------ABOUT-------------*/

@@ -26,6 +26,25 @@ function closeSettings(){
   document.getElementById('container-settings').style.left='-50%';
   document.getElementById('settings-menu').style.opacity='0';
 }
+// Settings menu (change cursor)
+const link = document.getElementById("cursor-change");
+let cursorVisible = true;
+
+link.addEventListener("click", function() {
+
+  if (cursorVisible) {
+    cursorDot.style.display = "none";
+    cursorOutline.style.display = "none";
+    cursorVisible = false;
+    document.body.classList.toggle('show-cursor');
+
+  } else {
+    cursorDot.style.display = "block";
+    cursorOutline.style.display = "block";
+    cursorVisible = true;
+    document.body.classList.toggle('show-cursor', false);
+  }
+});
 
 
 // Mouse Animation:
@@ -42,6 +61,8 @@ document.addEventListener("mousemove", (e) => {
    cursor.style.top = (y - centerY) + "px";
    cursor.style.left = (x - centerX) + "px";
 });
+
+
 // Mouse Cursor:
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
@@ -61,6 +82,7 @@ window.addEventListener("mousemove", function (e){
     top: `${posY}px`
   }, { duration: 100, fill: "forwards"});
 })
+
 
 // Get the button:
 let mybutton = document.getElementById("myBtn");

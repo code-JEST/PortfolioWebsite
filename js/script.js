@@ -1,4 +1,4 @@
-// ------------------Sjekker om det er firfox eller chrome----------------------:
+// ------------------Sjekker om det er firfox eller chrome (addet noe for firefox mobil)----------------------:
 if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || 
     navigator.userAgent.toLowerCase().indexOf('fennec') > -1 || 
     navigator.userAgent.toLowerCase().indexOf('fxios') > -1) {
@@ -113,9 +113,6 @@ function darken() {
   element.classList.toggle("dark-mode");
   mydarken.style.display = "none"
   mydarken2.style.display = "flex"
-
-  var img = document.getElementById("main-img");
-  img.src="/image/minecraft_black.png";
 } 
 
 let mydarken2 = document.getElementById("darkmode2");
@@ -125,19 +122,15 @@ function darken2() {
   element.classList.toggle("dark-mode");
   mydarken2.style.display = "none"
   mydarken.style.display = "flex"
-
-  var img = document.getElementById("main-img");
-  img.src="/image/minecraft.png";
 } 
+
+
 // Loader
 $(window).on("load",function(){
   setTimeout(function(){ 
     $(".loader-wrapper").fadeOut("slow");
   }, 2000);
 });
-
-
-
 
 
 
@@ -159,8 +152,9 @@ for(var i = 0; i < elements.length; i++){
 
 
 // ----------------WORK------------------------
-function openWork(){
-  document.getElementById('content-work').style.right='0%';
+function openWork() {
+  document.getElementById('content-work').style.right = '50%';
+  document.getElementById('content-work').style.transform = 'translateX(100)';
 }
 
 function hideAboutText(){

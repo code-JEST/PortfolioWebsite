@@ -1,5 +1,7 @@
 // ------------------Sjekker om det er firfox eller chrome----------------------:
-if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || 
+    navigator.userAgent.toLowerCase().indexOf('fennec') > -1 || 
+    navigator.userAgent.toLowerCase().indexOf('fxios') > -1) {
   document.documentElement.classList.add('firefox');
   document.documentElement.style.setProperty('--my-filter', 'none');
 }

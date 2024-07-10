@@ -31,7 +31,11 @@
 
     <!--Loader-->
     <div class="loader-wrapper">
-        <span class="loader"></span>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="gradient-loader"></div>
+        </div>
+      </div> 
         <h1 class="loader-text">loading inn work</h1>
         <h1 class="work-in-prgogress">This is a work in progress</h1>
     </div>
@@ -119,7 +123,7 @@
                     <h2 id="job-title">IT Specialist</h2>
                     <h1>Adrian Hoff</h1>
                     <p>Welcome to my portfolio! Browse through to discover the projects I've worked on and the skills I bring to the table.</p>
-                    <a href="#" class="work-button"><i class='bx bxs-hdd'></i>My work</a>
+                    <a href="#" class="work-button" onclick="openWork(); closeMenu(); hideFrontText(); hideAboutText()"><i class='bx bxs-hdd'></i>My work</a>
                 </div>
             </div>
         </div>

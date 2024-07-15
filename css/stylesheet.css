@@ -713,6 +713,7 @@ svg{
 /*CONENT*/
 #content-work{
     top: 0;
+    display: none;
     padding-top: 550px;
     position: absolute;
     right: 200%; 

@@ -139,6 +139,10 @@ function openAbout(){
   document.getElementById('content-about').style.right='0%';
 }
 function hideWorkText(){
+  var contentWork = document.getElementById('content-work');
+  setTimeout(function() {
+    contentWork.style.display = 'none';
+}, 50);
   document.getElementById('content-work').style.right='200%';
 }
 
@@ -153,8 +157,13 @@ for(var i = 0; i < elements.length; i++){
 
 // ----------------WORK------------------------
 function openWork() {
-  document.getElementById('content-work').style.right = '50%';
-  document.getElementById('content-work').style.transform = 'translateX(100)';
+  var contentWork = document.getElementById('content-work');
+  contentWork.style.display = 'block';
+  
+  setTimeout(function() {
+    contentWork.style.right = '50%';
+    contentWork.style.transform = 'translateX(100)';
+}, 50);
 }
 
 function hideAboutText(){

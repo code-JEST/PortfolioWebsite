@@ -18,6 +18,11 @@
     --blending: hard-light;
     --my-filter: url(#goo) blur(40px);
 
+    /*Firefox Background*/
+    --firefox-bg1: rgb(77, 220, 158);
+    --firefox-bg2: rgb(91, 55, 235);
+    --firefox-bg3: rgb(241, 48, 126);
+
     /*Work tiles*/
     --tile1: rgb(238, 78, 57);
     --tile2: rgb(86, 3, 196);
@@ -44,6 +49,11 @@
     --tile2: rgb(86, 3, 196);
     --tile3: rgb(209, 123, 212);
     --tile4: rgb(54, 151, 180);
+
+    /*Firefox Background*/
+    --firefox-bg1: rgb(52, 145, 104);
+    --firefox-bg2: rgb(55, 34, 138);
+    --firefox-bg3: rgb(146, 31, 77);
 }
 * {
     padding: 0;
@@ -300,7 +310,7 @@
     top: 30%;
     left: 20%;
     filter: blur(50px);
-    background-image: linear-gradient(#4ddc9e, #5b37eb, #f1307e);
+    background-image: linear-gradient(var(--firefox-bg1), var(--firefox-bg2), var(--firefox-bg3));
     animation: rotate 10s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
     border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
     transition: transform 0.1s ease-out;
@@ -626,7 +636,7 @@ svg{
     top: 30%;
     left: 20%;
     filter: blur(50px);
-    background-image: linear-gradient(#4ddc9e, #5b37eb, #f1307e);
+    background-image: linear-gradient(var(--firefox-bg1), var(--firefox-bg2), var(--firefox-bg3));
     animation: rotate 10s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
     border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
     transition: transform 0.1s ease-out;

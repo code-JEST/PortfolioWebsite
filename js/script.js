@@ -169,3 +169,33 @@ function openWork() {
 function hideAboutText(){
   document.getElementById('content-work').style.right='200%';
 }
+
+
+// ----------------CHANGE RANDOM COLOR------------------------
+// Function to generate a random color
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+// Function to change all the CSS variables with random colors
+function changeColors() {
+  const root = document.querySelector(':root');
+  const colorVars = [
+      '--up-btn', '--basic-btn', '--front-text', '--hamburger-text', '--hamburger-textHover',
+      '--color-bg1', '--color-bg2', '--color1', '--color2', '--color3', '--color4', '--color5', '--color-interactive',
+      '--tile1', '--tile2', '--tile3', '--tile4', '--firefox-bg1', '--firefox-bg2', '--firefox-bg3'
+  ];
+
+  colorVars.forEach(variable => {
+      root.style.setProperty(variable, getRandomColor());
+  });
+}
+
+// Add an event listener to the "Colors" menu item
+document.getElementById('color-change').addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent default link behavior
+  changeColors();
+});

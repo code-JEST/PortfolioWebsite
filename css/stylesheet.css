@@ -111,7 +111,7 @@
 }
 /*Hamburger menu*/
 .bx-menu{
-    z-index: 101;
+    z-index: 105;
     display: flex;
     position: relative;
     border: none;
@@ -174,7 +174,7 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
-    z-index: 101;
+    z-index: 105;
     position: fixed;
     top: 0;
     right: 200%;
@@ -185,7 +185,7 @@
 }
 /*Settings menu*/
 #settings-close{
-    z-index: 101;
+    z-index: 105;
     margin: 20px;
     float: right;
     color: #ffffff;
@@ -230,7 +230,7 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
-    z-index: 101;
+    z-index: 105;
     position: fixed;
     right: 200%;
     /* Adjust these properties to center the menu */
@@ -710,102 +710,51 @@ svg{
 
 
 /*-------------WORK-------------*/
-/*CONENT*/
-#content-work{
+#content-work {
     top: 0;
     display: none;
-    padding-top: 550px;
-    position: absolute;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 10px;
+    padding: 100px;
+    padding-top: 700px;
+    z-index: 100;
     right: 200%; 
     transform: translateX(50%); 
     transition: right 0.5s ease-out, transform 0.5s ease-out; 
-    width: 100%; 
-    max-width: 1200px; 
-    box-sizing: border-box;
-    z-index: 25;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1200px; /* Optional: Set a max-width to limit the size */
+    margin: 0 auto;
 }
-/*Work tiles*/
-.outer-container {
+
+.grid-item {
+    background-color: #007BFF;
+    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
     padding: 20px;
-    max-width: 1200px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
 }
 
-.tile {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.grid-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
-.tile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+.grid-item.medium {
+    grid-column: span 2;
 }
 
-.tile:hover {
+.grid-item.small {
+    grid-column: span 1;
+}
+
+.grid-item:hover {
     transform: scale(1.05);
 }
-
-/* Tile Sizes */
-.small-square {
-    grid-row: span 2;
-    grid-column: span 2;
-    height: 200px;
-}
-
-.medium-rect {
-    grid-row: span 2,5;
-    grid-column: span 3;
-    height: 200px;
-}
-
-.large-square {
-    grid-row: span 3;
-    grid-column: span 3;
-    height: 350px;
-}
-.large-tall-rect{
-    grid-row: span 3;
-    grid-column: span 3;
-    height: 420px;
-}
-
-.wide-rect {
-    grid-row: span 2;
-    grid-column: span 4;
-    height: 200px;
-}
-
-.tall-rect {
-    grid-row: span 1;
-    grid-column: span 1;
-    height: 200px;
-}
-
-#tile1 { background-color: var(--tile1); }
-#tile2 { background-color: var(--tile2); }
-#tile3 { background-color: var(--tile3); }
-#tile4 { background-color: var(--tile4); }
-#tile5 { background-color: var(--tile1); }
-#tile6 { background-color: var(--tile2); }
-#tile7 { background-color: var(--tile3); }
-#tile8 { background-color: var(--tile4); }
-#tile9 { background-color: var(--tile1); }
-#tile10 { background-color: var(--tile2); }
-#tile11 { background-color: var(--tile3); }
-#tile12 { background-color: var(--tile4); }
-#tile13 { background-color: var(--tile2); }
-#tile14 { background-color: var(--tile3); }

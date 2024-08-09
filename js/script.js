@@ -158,14 +158,14 @@ for(var i = 0; i < elements.length; i++){
 // ----------------WORK------------------------
 function openWork() {
   var contentWork = document.getElementById('content-work');
-  contentWork.style.display = 'block';
+  contentWork.style.display = 'grid';
   
   setTimeout(function() {
-    contentWork.style.right = '50%';
+    contentWork.style.right = '25%';
     contentWork.style.transform = 'translateX(100)';
 }, 50);
 }
 
 function hideAboutText(){
-  document.getElementById('content-about').style.right='200%';
+  document.getElementById('content-work').style.right='200%';
 }

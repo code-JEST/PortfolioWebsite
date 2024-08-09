@@ -167,7 +167,7 @@ function openWork() {
 }
 
 function hideAboutText(){
-  document.getElementById('content-work').style.right='200%';
+  document.getElementById('content-about').style.right='200%';
 }
 
 

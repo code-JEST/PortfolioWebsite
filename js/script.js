@@ -1,11 +1,3 @@
-// ------------------Sjekker om det er firfox eller chrome (addet noe for firefox mobil)----------------------:
-if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || 
-    navigator.userAgent.toLowerCase().indexOf('fennec') > -1 || 
-    navigator.userAgent.toLowerCase().indexOf('fxios') > -1) {
-  document.documentElement.classList.add('firefox');
-  document.documentElement.style.setProperty('--my-filter', 'none');
-}
-
 
 // Hamburger menu:
 function openMenu(){
@@ -161,8 +153,8 @@ function openWork() {
   contentWork.style.display = 'grid';
   
   setTimeout(function() {
-    contentWork.style.right = '25%';
-    contentWork.style.transform = 'translateX(100)';
+    contentWork.style.right = '50%';
+    contentWork.style.transform = 'translateX(70%)';
 }, 50);
 }
 

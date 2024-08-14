@@ -71,6 +71,7 @@
     z-index: 50;
     width: 100vw;
     height: 60vh;
+    padding-bottom: 50px;
     display: flex;
     position: absolute;
     top: 0;
@@ -510,7 +511,7 @@
 /*CONENT*/
 #content-about{
     top: 0;
-    padding-top: 670px;
+    padding-top: 470px;
     position: absolute;
     right: 200%;
     transition: right 0.5s ease-out; 
@@ -533,7 +534,7 @@
 }
 #content-about .main-text-about p{
     max-width: 100%;
-    width: 570px;
+    width: 800px;
     color: var(--front-text);
     line-height: 1.5;
     font-size: 20px;
@@ -554,8 +555,8 @@
     grid-auto-rows: 150px;
     gap: 10px;
     padding: 100px;
-    padding-top: 250px;
-    z-index: 100;
+    margin-top: 250px;
+    z-index: auto;
     right: 200%; 
     transform: translateX(50%); 
     transition: right 0.5s ease-out, transform 0.5s ease-out; 
@@ -575,7 +576,27 @@
     font-size: 1.5rem;
     padding: 20px;
     box-sizing: border-box;
+    position: relative; /* For positioning the text overlay */
+    overflow: hidden; /* To ensure content stays within the tile */
     transition: transform 0.2s ease;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image maintains aspect ratio and fits within the tile */
+    background-color: transparent; /* Transparent background for images */
+}
+
+.grid-item span {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text */
+    padding: 5px;
+    font-size: 18px;
+    color: #fff;
 }
 
 .grid-item.large {
@@ -594,3 +615,137 @@
 .grid-item:hover {
     transform: scale(1.05);
 }
+
+
+
+
+
+
+/*-------------diffrent screen sizes TEMP-------------*/
+/* Default styles for desktop screens */
+body {
+    background-color: #f2f2f2;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Styles for tablet screens (max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  
+    nav {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    nav a {
+      font-size: 16px;
+    }
+  }
+  
+  /* Styles for mobile screens (max-width: 480px) */
+  @media only screen and (max-width: 480px) {
+    body {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  
+    nav {
+      padding: 5px;
+    }
+  
+    nav ul {
+      padding: 0;
+    }
+  
+    nav li {
+      margin-bottom: 5px;
+    }
+  
+    nav a {
+      font-size: 14px;
+    }
+  
+    /* Hide the navigation menu on mobile screens */
+    nav {
+      display: none;
+    }
+  
+    /* Add a toggle button to show/hide the navigation menu on mobile screens */
+    .nav-toggle {
+      display: block;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .nav-toggle:hover {
+      background-color: #444;
+    }
+  
+    /* Show the navigation menu when the toggle button is clicked */
+    .nav-toggle:checked + nav {
+      display: block;
+    }
+  }
+  
+  /* Styles for large desktop screens (min-width: 1200px) */
+  @media only screen and (min-width: 1200px) {
+    body {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  
+    nav {
+      padding: 30px;
+    }
+  
+    nav ul {
+      justify-content: space-around;
+    }
+  
+    nav li {
+      margin-right: 30px;
+    }
+  
+    nav a {
+      font-size: 20px;
+    }
+  }

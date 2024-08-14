@@ -128,7 +128,7 @@ $(window).on("load",function(){
 
 // ----------------ABOUT------------------------
 function openAbout(){
-  document.getElementById('content-about').style.right='0%';
+  document.getElementById('content-about').style.right='30%';
 }
 function hideWorkText(){
   var contentWork = document.getElementById('content-work');

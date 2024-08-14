@@ -73,7 +73,7 @@
     height: 60vh;
     padding-bottom: 50px;
     display: flex;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     justify-content: center;
@@ -334,7 +334,7 @@
     z-index: 98;
     transition: .2s;    
 }
-#darmode2:hover{
+#darkmode2:hover{
     display: flex;
     position: relative;
     background-color: rgba(77, 77, 77, 0.24);
@@ -683,7 +683,6 @@ body {
       font-size: 12px;
       line-height: 1.2;
     }
-  
     nav {
       padding: 5px;
     }

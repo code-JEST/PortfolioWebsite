@@ -138,11 +138,13 @@ function hideWorkText(){
   document.getElementById('content-work').style.right='200%';
 }
 
+
+// ----------------HIDE FRONT TEXT------------------------
 function hideFrontText(){
   var elements = document.getElementsByClassName('content');
-for(var i = 0; i < elements.length; i++){
-    elements[i].style.transform = 'translateX(-100%)';
-}
+  for(var i = 0; i < elements.length; i++){
+      elements[i].style.transform = 'translateX(-100%)';
+  }
 }
 
 
@@ -150,18 +152,12 @@ for(var i = 0; i < elements.length; i++){
 // ----------------WORK------------------------
 function openWork() {
   var contentWork = document.getElementById('content-work');
-  contentWork.style.display = 'grid';
-  
-  setTimeout(function() {
-    contentWork.style.right = '50%';
-    contentWork.style.transform = 'translateX(70%)';
-}, 50);
+    contentWork.style.display = 'grid';
 }
 
 function hideAboutText(){
   document.getElementById('content-about').style.right='200%';
 }
-
 
 // ----------------CHANGE RANDOM COLOR------------------------
 // Function to generate a random color
@@ -191,3 +187,53 @@ document.getElementById('color-change').addEventListener('click', function(e) {
   e.preventDefault(); // Prevent default link behavior
   changeColors();
 });
+
+
+
+
+// ------------------------ GITHUB TO WORK------------------------
+
+ // GitHub username to fetch repositories for
+ const username = "code-JEST";
+
+ // GitHub API endpoint
+ const apiUrl = `https://api.github.com/users/${username}/repos`;
+
+ // Reference to content-work container
+ const contentWork = document.getElementById("content-work");
+
+ // Fetch repositories and display them
+ async function fetchRepos() {
+   try {
+     const response = await fetch(apiUrl);
+     if (!response.ok) {
+       throw new Error("Failed to fetch repositories");
+     }
+
+     const repos = await response.json();
+
+     // Clear existing content
+     contentWork.innerHTML = "";
+
+     // Populate with repository data
+     repos.forEach((repo) => {
+       const repoItem = document.createElement("div");
+       repoItem.className = "grid-item medium";
+
+       // HTML content for each repository
+       repoItem.innerHTML = `
+         <a href="${repo.html_url}" target="_blank">
+           <img src="https://via.placeholder.com/150" alt="${repo.name}">
+           <span>${repo.name}</span>
+         </a>
+         <p>${repo.description || "No description available."}</p>
+       `;
+       contentWork.appendChild(repoItem);
+     });
+   } catch (error) {
+     contentWork.innerHTML = `<p>Error loading repositories: ${error.message}</p>`;
+   }
+ }
+
+ // Call the function on page load
+ fetchRepos();

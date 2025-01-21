@@ -132,10 +132,10 @@ function openAbout(){
 }
 function hideWorkText(){
   var contentWork = document.getElementById('content-work');
+  contentWork.style.opacity = '0.5';
   setTimeout(function() {
     contentWork.style.display = 'none';
-}, 50);
-  document.getElementById('content-work').style.right='200%';
+}, 100);
 }
 
 
@@ -152,7 +152,10 @@ function hideFrontText(){
 // ----------------WORK------------------------
 function openWork() {
   var contentWork = document.getElementById('content-work');
-    contentWork.style.display = 'grid';
+  contentWork.style.display = 'grid';
+  setTimeout(function () {
+    contentWork.style.opacity = '1';
+  }, 10);
 }
 
 function hideAboutText(){

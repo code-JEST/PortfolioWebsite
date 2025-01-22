@@ -129,6 +129,7 @@ $(window).on("load",function(){
 // ----------------ABOUT------------------------
 function openAbout(){
   document.getElementById('content-about').style.right='30%';
+  document.getElementById('content-about').style.display='block';
 }
 function hideWorkText(){
   var contentWork = document.getElementById('content-work');
@@ -226,7 +227,6 @@ document.getElementById('color-change').addEventListener('click', function(e) {
        // HTML content for each repository
        repoItem.innerHTML = `
          <a href="${repo.html_url}" target="_blank">
-           <img src="https://via.placeholder.com/150" alt="${repo.name}">
            <span>${repo.name}</span>
          </a>
          <p>${repo.description || "No description available."}</p>
